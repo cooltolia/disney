@@ -1,0 +1,129 @@
+.btn {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  font-family: $font-stack;
+  text-decoration: none;
+
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    background-color: darken(#ffffff, 10%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+
+    animation: none;
+  }
+}
+
+.btn--subscribe {
+  width: 240px;
+  height: 60px;
+
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 32px;
+  color: #ff4b64;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  word-spacing: 0.15em;
+
+  border-radius: 30px;
+
+  &::after {
+    content: "Now only £4.99 per month.";
+    position: absolute;
+    top: 87px;
+    left: 10px;
+
+    width: 100%;
+
+    font-weight: 500;
+    font-size: inherit;
+    line-height: 1;
+    font-family: inherit;
+    color: #000000;
+    color: $font-color-light;
+    text-transform: lowercase;
+    letter-spacing: normal;
+
+    opacity: 0.5;
+  }
+}
+
+.btn--blue {
+  width: 290px;
+
+  color: $font-color-light;
+
+  background-color: #5f94ff;
+
+  animation: scale 3s ease infinite;
+
+  &:hover {
+    background-color: darken(#5f94ff, 10%);
+  }
+
+  &::after {
+    left: 50%;
+
+    text-align: center;
+    color: #d7d4cd;
+
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+.btn--green {
+  width: 355px;
+  margin: 0 auto;
+
+  color: $font-color-light;
+
+  background-color: #9ecb45;
+
+  animation: scale 4s ease infinite;
+
+  &:hover {
+    background-color: darken(#9ecb45, 10%);
+  }
+
+
+  &::after {
+    left: 50%;
+
+    text-align: center;
+    color: #d7d4cd;
+
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  30% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
